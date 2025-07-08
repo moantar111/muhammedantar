@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة محمد عنتر الشخصية - أفكار، تجارب، ومشاركات">
+    <title>Muhammed Antar</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="index.css" rel="stylesheet">
+</head>
+<body class="color-palette-1">
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar">
+        <button class="accessibility-btn" id="increaseFont" title="تكبير الخط">
+            <i class="fas fa-text-height"></i>
+        </button>
+        <button class="accessibility-btn" id="decreaseFont" title="تصغير الخط">
+            <i class="fas fa-text-width"></i>
+        </button>
+        <button class="accessibility-btn" id="toggleContrast" title="تباين عالي">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/profile.jpg" alt="MuhammedAntarLogo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-md-inline">Muhammed Antar</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i> المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html"><i class="fas fa-briefcase me-1"></i> أعمالي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html"><i class="fas fa-images me-1"></i> معرض الوسائط</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> عنِّي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> اتصل بي</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="بحث..." id="searchInput">
+                            <button class="btn btn-outline-light" type="button" id="searchButton">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">محمد عنتر</h1>
+            <p class="hero-subtitle">مدونة شخصية - أفكار وتجارب</p>
+            <div class="mt-4">
+                <a href="blog.html" class="btn btn-light btn-lg me-3"><i class="fas fa-book-reader me-2"></i>تصفح المدونة</a>
+                <a href="portfolio.html" class="btn btn-outline-light btn-lg"><i class="fas fa-briefcase me-2"></i>أعمالي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Featured Article -->
+        <section id="featured-article" class="mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <img src="img/profile.jpg" class="card-img-top" alt="Image - Muhammed Antar">
+                        <div class="card-body">
+                            <h2 class="card-title">مرحبًا بكم في مدونتي</h2>
+                            <p class="card-text">هذه المساحة هي مكاني الخاص لمشاركة أفكاري، تجاربي، واهتماماتي المتنوعة. هنا ستجدون مقالات عن التكنولوجيا، الحياة، والكثير من المواضيع التي تهمني وأعتقد أنها قد تهمكم أيضًا.</p>
+                            <p class="card-text">أنا أؤمن بقوة المشاركة والتعلم المستمر، وهذه المدونة هي إحدى طرق تحقيق هذا الإيمان. أتمنى أن تجدوا فيها ما يفيدكم ويضيف لكم.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <span class="badge bg-primary me-2">شخصي</span>
+                                    <span class="badge bg-secondary">تأملات</span>
+                                </div>
+                                <a href="about.html" class="btn btn-primary"><i class="fas fa-user me-1"></i>تعرف عليّ أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles -->
+        <section class="mb-5">
+<!-- Latest Articles -->
+<section class="mb-5">
+    <h2 class="text-center mb-4">أحدث المقالات</h2>
+    <div class="row g-4" id="latestPostsContainer">
+
+    </div>
+    <div class="text-center mt-4">
+        <a href="blog.html" class="btn btn-primary">عرض جميع المقالات</a>
+    </div>
+</section>
+
+        <!-- About Me Section -->
+        <section class="my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="img/about.jpg" alt="محمد عنتر" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">من أنا؟</h2>
+                    <p>أنا محمد عنتر، مهتم بالتكنولوجيا، البرمجة، الكتابة. أعمل كمبرمج مستقل وأحب مشاركة ما أتعلمه مع الآخرين.</p>
+                    <p>هذه المدونة هي مساحتي الخاصة لمشاركة أفكاري، تجاربي، والدروس التي تعلمتها في رحلتي الشخصية والمهنية.</p>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">المزيد عني</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">مدونة محمد عنتر</h5>
+                    <p>مساحة شخصية لمشاركة الأفكار والتجارب في مجالات التكنولوجيا، الحياة، والعمل الحر.</p>
+                    <div class="mt-4">
+                        <a href="https://x.com/MohammedAntar1X" class="social-icon me-2"><i class="fab fa-twitter"></i>Twitter/X</a>
+                        <a href="https://www.linkedin.com/in/mohammed-ben-antar-5ba341311/" class="social-icon me-2"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                        <a href="https://github.com/Mr-muhammed" class="social-icon me-2"><i class="fab fa-github"></i>GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">الرئيسية</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white">المدونة</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-white">أعمالي</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white">معرض الوسائط</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">اتصل بي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">تواصل معي</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> MoTheConqueror@outlook.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +2 1554959496</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> القاهرة، مصر</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Muhammed Antar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    const container = document.getElementById('latestPostsContainer');
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/posts/');
+        const posts = await response.json();
+
+        posts.slice(0, 3).forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'col-md-4';
+            card.innerHTML = `
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="article1.jpg" class="card-img-top" alt="صورة للمنشور">
+                    <div class="card-body">
+                        <h3 class="card-title">${post.title}</h3>
+                        <p class="card-text">${truncateText(post.content, 150)}</p>
+                        <a href="blog.html#post-${post.id}" class="btn btn-outline-primary">اقرأ المزيد</a>
+                    </div>
+                </div>
+
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        container.innerHTML = `<p class="text-danger text-center">حدث خطأ أثناء تحميل المقالات.</p>`;
+        console.error('Fetch error:', error);
+    }
+});
+
+function truncateText(text, maxLength) {
+    return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+}</script>
+
+</body>
+</html>
