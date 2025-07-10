@@ -127,9 +127,7 @@
 <!-- Latest Articles -->
 <section class="mb-5">
     <h2 class="text-center mb-4">أحدث المقالات</h2>
-    <div class="row g-4" id="latestPostsContainer">
-
-    </div>
+    <div class="row g-4" id="latestPostsContainer"></div>
     <div class="text-center mt-4">
         <a href="blog.html" class="btn btn-primary">عرض جميع المقالات</a>
     </div>
@@ -205,19 +203,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         posts.slice(0, 3).forEach(post => {
             const card = document.createElement('div');
             card.className = 'col-md-4';
+
+            // التاريخ بصيغة مناسبة
+            const date = new Date(post.created_at).toLocaleDateString('ar-EG', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            // الصورة: تأكد أن post.image يحتوي على رابط الصورة الكامل
+            const imageUrl = post.image ? post.image : 'default.jpg'; // صورة افتراضية إذا لم تكن هناك صورة
+
             card.innerHTML = `
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="article1.jpg" class="card-img-top" alt="صورة للمنشور">
-                    <div class="card-body">
+                    <img src="${imageUrl}" class="card-img-top" alt="صورة للمنشور">
+                    <div class="card-body d-flex flex-column">
                         <h3 class="card-title">${post.title}</h3>
+                        <small class="text-muted mb-2">${date} - ${post.category?.name || 'غير مصنّف'}</small>
                         <p class="card-text">${truncateText(post.content, 150)}</p>
-                        <a href="blog.html#post-${post.id}" class="btn btn-outline-primary">اقرأ المزيد</a>
+                        <a href="blog.html#post-${post.id}" class="btn btn-outline-primary mt-auto">اقرأ المزيد</a>
                     </div>
                 </div>
-
             `;
+
             container.appendChild(card);
         });
+
     } catch (error) {
         container.innerHTML = `<p class="text-danger text-center">حدث خطأ أثناء تحميل المقالات.</p>`;
         console.error('Fetch error:', error);
@@ -226,7 +239,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function truncateText(text, maxLength) {
     return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
-}</script>
+}
+</script>
 
 </body>
 </html>
